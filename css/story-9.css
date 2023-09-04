@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+@media (max-width: 1920px) {
+  #root {
+    width: 100vw;
+    height: 100vh;
+    background: url(../pic/moon-1.jpg);
+    background-size: contain;
+  }
+  #root #text {
+    width: 100vw;
+    height: 100vh;
+    font-size: 30px;
+    font-family: "Times New Roman", Times, serif;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .button {
+    width: 4vw;
+    height: 8vh;
+    top: 3.4vh;
+    right: 3vw;
+    position: absolute;
+    border-radius: 10px;
+    letter-spacing: 30px;
+    color: white;
+    cursor: pointer;
+  }
+}
+@media (max-width: 800px) {
+  #root {
+    width: 100vw;
+    height: 100vh;
+    background: url(../pic/moon-1.jpg);
+    background-size: cover;
+    background-position: 93%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  #root #text {
+    width: 100vw;
+    height: 100vh;
+    font-size: 5vw;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #root .button {
+    width: 4vw;
+    height: 8vh;
+    font-size: 2vw;
+    top: 3vh;
+    right: 10vw;
+    position: absolute;
+    border-radius: 10px;
+    letter-spacing: 30px;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+  }
+}

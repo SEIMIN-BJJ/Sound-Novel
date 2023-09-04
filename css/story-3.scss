@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex ($d, $j, $a) {
+
+  display: ($d);
+  justify-content: ($j);
+  align-items: ($a);
+}
+
+@mixin border {
+  border: 1px solid black;
+}
+
+@mixin mobile {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width: 1920px) {
+    @content;
+  }
+}
+
+body::-webkit-scrollbar {
+
+  width: 0;
+  display: none;
+}
+
+
+@include pc {
+  #root {
+    width: 100vw;
+    height: 120vh;
+    background: url(../pic/rain1.jpg);
+    @include flex(flex, center, center);
+
+    #text {
+      width: 70vw;
+      height: 110vh;
+      font-size: 30px;
+      text-align: left;
+      font-family: 'Times New Roman', Times, serif;
+      color: rgb(255, 255, 255);
+      z-index: 0;
+      cursor: pointer;
+      @include flex(flex, center, center);
+    }
+    .button {
+
+      width: 4vw;
+      height: 8vh;
+      margin-right: -90vw;
+      margin-top: -105vh;
+      position: absolute;
+      border-radius: 10px;
+      color: white;
+      z-index: 1;
+      cursor: pointer;
+      }
+  }
+}
+
+@include mobile {
+  #root {
+
+    width: 100vw;
+    height: 110vh;
+    background: url(../pic/rain1.jpg);
+    background-size: cover;
+    background-position: right right;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    #text {
+      width: 100vw;
+      height: 110vh;
+      font-size: 4vw;
+      text-align: left;
+      font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+      color: rgb(255, 255, 255);
+      z-index: 0;
+      @include flex(flex, center, center);
+    }
+    .button {
+
+      width: 4vw;
+      height: 8vh;
+      font-size: 2vw;
+      margin-right: -75vw;
+      margin-top: -95vh;
+      position: absolute;
+      border-radius: 10px;
+      color: white;
+      z-index: 1;
+      cursor: pointer;
+      }
+  }
+}
