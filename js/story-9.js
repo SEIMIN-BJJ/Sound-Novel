@@ -21,6 +21,6 @@ text.addEventListener("click", function () {
 });
 
 button.addEventListener("click", function () {
-  let page = "https://seimin-bjj.github.io/PortFolio-R/";
+  let page = "https://seimin-bjj.github.io/PTF-retro/";
   location.href = page;
 });

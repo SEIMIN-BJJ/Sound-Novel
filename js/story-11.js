@@ -14,6 +14,6 @@ function typing() {
 setInterval(typing, 500);
 
 text.addEventListener("click", function () {
-  let page = "https://seimin-bjj.github.io/PortFolio-R/";
+  let page = "https://seimin-bjj.github.io/PTF-retro/";
   location.href = page;
 });
